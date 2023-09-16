@@ -121,7 +121,7 @@ usersRouter.put("/users/forgot", async (req, res) => {
     const randomString =
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
-    const link = `http://localhost:3000/users/reset/${randomString}`;
+    const link = `https://bejewelled-begonia-67075c.netlify.app/users/reset/${randomString}`;
 
     matchedUser.resetToken = randomString;
     await User.findByIdAndUpdate(matchedUser.id, matchedUser);
